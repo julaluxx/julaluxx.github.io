@@ -1,0 +1,21 @@
+{
+    "name": "julayourluck",
+    "version": "1.0.0",
+    "description": "A personal website for Jula to lay on.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "npm run dev",
+        "dev": "live-server"
+    },
+    "keywords": [
+        "Jula",
+        "JulaYourLuck",
+        "personal website"
+    ],
+    "author": "Jula",
+    "license": "MIT",
+    "devDependencies": {
+        "live-server": "^1.2.2"
+    }
+}

@@ -5,13 +5,14 @@
 }  
 
 body {
+    color: #333;
     background-color: #fff; 
     font-family: "Press Start 2P", system-ui;
     margin: 0; 
     padding: 10px; 
 }
 
-#header {
+header h1{
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -20,9 +21,59 @@ body {
 
 #profile-picture {
     display: block;
+    border-style: groove;
     margin: 0 auto;
     width: 200px;
     height: auto;
+}
+
+#profile-picture:hover {
+    border-style: solid;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#name {
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#profession {
+    color: #ff7196;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-size: 12px;
+}
+
+#short-intro {
+    border-style: dashed;
+    padding: 20px;
+    margin: 5%;
+}
+
+#short-intro:hover {
+    border-style: solid;
+}
+
+h3 {
+    padding: 5px;
+    background-color: #ebebeb;
+    color: #ff7196
+}
+
+li a{
+    color: #666;
+}
+
+li a:hover {
+    color: #ff7196;
 }
 
 footer p {
