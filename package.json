@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "npm run dev",
-        "dev": "live-server"
+        "dev": "live-server src"
     },
     "keywords": [
         "Jula",
