@@ -33,15 +33,29 @@ marquee {
     font-size: 5vmin;
 }
 
+button {
+    color: #fff;
+    background-color: #ff7196;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
 #profile-picture {
     display: block;
     margin: 0 auto;
     width: min(40vmin, 200px);
     height: auto;
+    border: 5px solid transparent; /* Add initial transparent border */
+    box-sizing: border-box; /* Include border in element's total width and height */
 }
-
 #profile-picture:hover {
     border-style: solid;
+    border-color: #333; /* Change border color on hover */
 }
 
 .introduction {
@@ -68,15 +82,11 @@ marquee {
 
 #short-intro {
     border-style: dashed ;
-    /* border-color: #ff7196;
-    border-width: 2px; */
+    border-color: #333;
+    border-width: 2px;
     padding: 2vmin; 
     margin: 2.5% 10% 2.5% 10%;
     font-size: 3vmin;
-}
-
-#short-intro:hover {
-    border-style: solid;
 }
 
 .menu {
@@ -106,7 +116,7 @@ h3 {
     padding: 5px;
     background-color: #ebebeb;
     color: #ff7196;
-    font-size: 5vmin; /* Make font size responsive */
+    font-size: 5vmin; 
 }
 
 li a {
@@ -122,5 +132,5 @@ footer p {
     margin: 5%;
     text-align: center;
     color: #666;
-    font-size: 1.5vmin; /* Make font size responsive */
+    font-size: 1.5vmin; 
 }
