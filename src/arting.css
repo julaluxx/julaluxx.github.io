@@ -1,0 +1,148 @@
+/* Gallery Page Styles */
+.gallery-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2vmin;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vmin;
+    padding-bottom: 2vmin;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.back-button {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.8vmin;
+    margin-right: 2vmin;
+    padding: 1vmin 2vmin;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: var(--text-color);
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 3vmin;
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Gallery Filters */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 2vmin;
+    margin-bottom: 3vmin;
+    padding: 0 2vmin;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 1vmin 2vmin;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.6vmin;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: max-content;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2vmin;
+    padding: 1vmin;
+}
+
+.art-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    aspect-ratio: 1;
+    border: 2px solid var(--text-color);
+    box-shadow: 4px 4px 0 var(--text-color);
+}
+
+.art-item:hover {
+    transform: translateY(-5px);
+}
+
+.art-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.art-item:hover img {
+    transform: scale(1.05);
+}
+
+.art-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1vmin;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.art-item:hover .art-info {
+    transform: translateY(0);
+}
+
+.art-info h3 {
+    margin: 0;
+    font-size: 1.8vmin;
+    color: var(--text-color);
+}
+
+.art-info p {
+    margin: 0.5vmin 0 0;
+    font-size: 1.4vmin;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .filter-btn {
+        font-size: 1.8vmin;
+    }
+    
+    .art-info h3 {
+        font-size: 2vmin;
+    }
+    
+    .art-info p {
+        font-size: 1.6vmin;
+    }
+} 
