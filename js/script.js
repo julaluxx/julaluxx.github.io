@@ -65,70 +65,74 @@ document.getElementById('profile-picture').addEventListener('click', () => {
 });
 
 // Moon Phase Functionality
-async function getMoonPhase() {
-    try {
-        // Get current timestamp in milliseconds
-        const timestamp = Date.now();
-        
-        // Fetch moon data from Farmsense API
-        const response = await fetch(`https://api.farmsense.net/v1/moonphases/?d=${timestamp}`);
-        const data = await response.json();
-        
-        if (!data || data.length === 0) {
-            throw new Error('No moon data available');
-        }
+function updateDateTime() {
+    const now = new Date();
+    
+    // Format date: e.g., "Friday, September 15, 2023"
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = now.toLocaleDateString('en-US', dateOptions);
+    
+    // Format time: e.g., "3:45 PM"
+    const timeOptions = { hour: 'numeric', minute: '2-digit', hour12: true };
+    const formattedTime = now.toLocaleTimeString('en-US', timeOptions);
+    
+    // Update the elements
+    document.getElementById('current-date').textContent = formattedDate;
+    document.getElementById('current-time').textContent = formattedTime;
+}
 
-        const moonPhase = data[0];
-        const phase = parseInt(moonPhase.Phase);
-        
-        // Map phase number to moon phase name and emoji
-        const phases = {
-            0: { name: 'New Moon', emoji: '🌑' },
-            1: { name: 'Waxing Crescent', emoji: '🌒' },
-            2: { name: 'First Quarter', emoji: '🌓' },
-            3: { name: 'Waxing Gibbous', emoji: '🌔' },
-            4: { name: 'Full Moon', emoji: '🌕' },
-            5: { name: 'Waning Gibbous', emoji: '🌖' },
-            6: { name: 'Last Quarter', emoji: '🌗' },
-            7: { name: 'Waning Crescent', emoji: '🌘' }
-        };
+function getMoonPhase() {
+    // Calculate moon phase based on lunar cycle
+    const lunarDays = 29.53058867; // Length of lunar month in days
+    const knownNewMoon = new Date(2000, 0, 6, 18, 14).getTime(); // Known new moon date
+    const now = new Date().getTime();
+    const daysSinceKnownNewMoon = (now - knownNewMoon) / (1000 * 60 * 60 * 24);
+    const currentAge = (daysSinceKnownNewMoon % lunarDays);
+    
+    // Map age to phase index (0-7)
+    const phaseIndex = Math.floor((currentAge / lunarDays) * 8);
+    
+    // Define moon phases
+    const phases = {
+        0: { name: 'New Moon', emoji: '🌑' },
+        1: { name: 'Waxing Crescent', emoji: '🌒' },
+        2: { name: 'First Quarter', emoji: '🌓' },
+        3: { name: 'Waxing Gibbous', emoji: '🌔' },
+        4: { name: 'Full Moon', emoji: '🌕' },
+        5: { name: 'Waning Gibbous', emoji: '🌖' },
+        6: { name: 'Last Quarter', emoji: '🌗' },
+        7: { name: 'Waning Crescent', emoji: '🌘' }
+    };
 
-        // Find the closest phase
-        const phaseIndex = Math.floor((phase / 28) * 8) % 8;
-        const currentPhase = phases[phaseIndex];
+    const currentPhase = phases[phaseIndex];
 
-        // Update the moon phase display
-        const moonPhaseText = document.getElementById('moon-phase-text');
-        const moonPhaseImg = document.getElementById('moon-phase');
-        
-        if (moonPhaseText && moonPhaseImg) {
-            moonPhaseText.textContent = `${currentPhase.name}`;
-            // Create a temporary div to display the emoji as an image
-            const tempDiv = document.createElement('div');
-            tempDiv.style.fontSize = '48px';
-            tempDiv.style.height = '60px';
-            tempDiv.style.width = '60px';
-            tempDiv.style.display = 'flex';
-            tempDiv.style.alignItems = 'center';
-            tempDiv.style.justifyContent = 'center';
-            tempDiv.textContent = currentPhase.emoji;
-            moonPhaseImg.parentNode.replaceChild(tempDiv, moonPhaseImg);
-        }
-
-    } catch (error) {
-        console.error('Error fetching moon phase:', error);
-        const moonPhaseText = document.getElementById('moon-phase-text');
-        if (moonPhaseText) {
-            moonPhaseText.textContent = 'Moon phase unavailable';
-        }
+    // Update the moon phase display
+    const moonPhaseText = document.getElementById('moon-phase-text');
+    const moonPhaseImg = document.getElementById('moon-phase');
+    
+    if (moonPhaseText && moonPhaseImg) {
+        moonPhaseText.textContent = `${currentPhase.name}`;
+        // Create a temporary div to display the emoji as an image
+        const tempDiv = document.createElement('div');
+        tempDiv.style.fontSize = '48px';
+        tempDiv.style.height = '60px';
+        tempDiv.style.width = '60px';
+        tempDiv.style.display = 'flex';
+        tempDiv.style.alignItems = 'center';
+        tempDiv.style.justifyContent = 'center';
+        tempDiv.textContent = currentPhase.emoji;
+        moonPhaseImg.parentNode.replaceChild(tempDiv, moonPhaseImg);
     }
 }
 
-// Call getMoonPhase when the page loads
+// Call getMoonPhase and updateDateTime when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     getMoonPhase();
+    updateDateTime();
     // Refresh moon phase every hour
     setInterval(getMoonPhase, 3600000);
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
 });
 
 // Music Player Functionality

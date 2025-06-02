@@ -247,6 +247,25 @@ footer {
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+.datetime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vmin;
+    margin-top: 1vmin;
+    border-top: 2px dashed var(--border-color);
+    padding-top: 1vmin;
+    width: 100%;
+}
+
+#current-date,
+#current-time {
+    font-size: 1.4vmin;
+    color: var(--text-color);
+    margin: 0;
+    text-align: center;
+}
+
 /* Animation for moon phase transition */
 @keyframes fadeIn {
     from {
