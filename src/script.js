@@ -131,3 +131,63 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(getMoonPhase, 3600000);
 });
 
+// Music Player Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const playPauseBtn = document.getElementById('play-pause');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const progress = document.querySelector('.progress');
+    let isPlaying = false;
+
+    // Toggle play/pause
+    playPauseBtn.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        playPauseBtn.querySelector('span').textContent = isPlaying ? '⏸' : '▶';
+        
+        // Add animation to progress bar when playing
+        if (isPlaying) {
+            progress.style.width = '100%';
+            progress.style.transition = 'width 30s linear';
+        } else {
+            const currentWidth = progress.offsetWidth / progress.parentElement.offsetWidth * 100;
+            progress.style.width = `${currentWidth}%`;
+            progress.style.transition = 'none';
+        }
+    });
+
+    // Reset progress bar when it reaches the end
+    progress.addEventListener('transitionend', () => {
+        if (isPlaying) {
+            progress.style.transition = 'none';
+            progress.style.width = '0';
+            setTimeout(() => {
+                progress.style.transition = 'width 30s linear';
+                progress.style.width = '100%';
+            }, 50);
+        }
+    });
+
+    // Previous and Next button effects
+    [prevBtn, nextBtn].forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Reset progress bar
+            progress.style.transition = 'none';
+            progress.style.width = '0';
+            
+            // Visual feedback
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                btn.style.transform = 'scale(1)';
+            }, 100);
+
+            // If playing, start progress bar animation
+            if (isPlaying) {
+                setTimeout(() => {
+                    progress.style.transition = 'width 30s linear';
+                    progress.style.width = '100%';
+                }, 50);
+            }
+        });
+    });
+});
+

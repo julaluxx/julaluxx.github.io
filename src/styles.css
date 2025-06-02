@@ -233,7 +233,7 @@ footer {
     align-items: center;
     gap: 1vmin;
     padding: 2vmin;
-    background-color: var(--border-color);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin: 2vmin 0;
@@ -262,4 +262,143 @@ footer {
 .moon-phase div {
     animation: fadeIn 0.5s ease-out;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Music Player */
+.music-player {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2vmin;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vmin;
+}
+
+.song-info {
+    text-align: center;
+    padding: 1vmin;
+}
+
+.song-title {
+    color: var(--primary-color);
+    font-size: 1.4vmin;
+    margin-bottom: 0.5vmin;
+}
+
+.song-name {
+    color: var(--text-color);
+    font-size: 1.8vmin;
+    margin-bottom: 0.5vmin;
+}
+
+.artist-name {
+    color: var(--primary-color);
+    font-size: 1.4vmin;
+    opacity: 0.8;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+}
+
+.progress {
+    width: 30%;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.1s linear;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 2vmin;
+    padding: 1vmin 0;
+}
+
+.control-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 2.5vmin;
+    cursor: pointer;
+    padding: 1vmin;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    width: 4vmin;
+    height: 4vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+#play-pause {
+    font-size: 3vmin;
+    width: 5vmin;
+    height: 5vmin;
+    border: 1px solid var(--text-color);
+    box-shadow: 2px 2px 0 var(--text-color);
+}
+
+#play-pause:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#play-pause:active {
+    box-shadow: 1px 1px 0 var(--text-color);
+    transform: translate(1px, 1px);
+}
+
+/* Quote of the Day */
+.quote-of-day {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2vmin;
+    margin: 2vmin 0;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quote-of-day h3 {
+    color: var(--primary-color);
+    font-size: 2vmin;
+    text-align: center;
+    margin: 0 0 1.5vmin 0;
+    padding-bottom: 1vmin;
+    border-bottom: 2px dashed var(--border-color);
+}
+
+.quote-content {
+    padding: 1vmin;
+    text-align: center;
+}
+
+.quote-content p {
+    color: var(--text-color);
+    font-size: 1.8vmin;
+    line-height: 1.5;
+    margin: 0 0 1vmin 0;
+    font-style: italic;
+}
+
+.quote-author {
+    color: var(--primary-color);
+    font-size: 1.6vmin;
+    text-align: right;
+    opacity: 0.8;
 }
