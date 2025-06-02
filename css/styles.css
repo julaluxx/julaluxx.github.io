@@ -402,3 +402,35 @@ footer {
     text-align: right;
     opacity: 0.8;
 }
+
+.owner-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2vmin;
+    margin: 2vmin 0;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.info-item {
+    margin-bottom: 2vmin;
+    padding: 1vmin;
+    border-bottom: 2px dashed var(--border-color);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-size: 1.4vmin;
+    color: var(--primary-color);
+    margin-bottom: 1vmin;
+    text-align: center;
+}
+
+.info-value {
+    font-size: 1.8vmin;
+    color: var(--text-color);
+    padding: 0.5vmin 0;
+    text-align: center;
+}
