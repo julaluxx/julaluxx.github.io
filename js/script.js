@@ -38,7 +38,7 @@ document.getElementById('profile-picture').addEventListener('click', () => {
             drop.style.position = 'fixed';
             drop.style.left = `${Math.random() * 100}vw`;
             drop.style.top = '-10px'; // Start above the screen
-            drop.style.color = '#483AA0'; // Or your desired color
+            drop.style.color = '#FF1493'; // Hot pink color for better contrast against light background
             drop.style.fontSize = `${Math.random() * 20 + 10}px`;
             drop.style.zIndex = '1000'; // Ensure it's on top
             document.body.appendChild(drop);
