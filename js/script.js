@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(getMoonPhase, 3600000);
     // Update date and time every second
     setInterval(updateDateTime, 1000);
+    initializeSkillBars();
 });
 
 // Music Player Functionality
@@ -194,4 +195,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Initialize skill progress bars
+function initializeSkillBars() {
+    const skillBars = document.querySelectorAll('.skill-progress');
+    skillBars.forEach(progress => {
+        const width = progress.style.width;
+        if (width) {
+            progress.parentElement.style.setProperty('--progress-width', width);
+        }
+    });
+}
 
