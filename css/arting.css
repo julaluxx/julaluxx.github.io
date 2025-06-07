@@ -58,11 +58,14 @@
 
 /* Gallery Filters */
 .gallery-filters {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-bottom: 3rem;
-    flex-wrap: wrap;
+    padding: 0.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .filter-btn {
@@ -75,6 +78,8 @@
     font-family: inherit;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
 }
 
 .filter-btn:hover {
