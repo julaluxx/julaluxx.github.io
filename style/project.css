@@ -1,0 +1,73 @@
+:root {
+
+    --font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.menu {
+    margin-bottom: 5px;
+    border-style: solid;
+}
+
+.menu ul {
+    background-color: hsla(0, 0%, 20%, 0.800);
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+}
+
+/* .menu a {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin: 4px 0px;
+    padding: 2px;
+    border-style: outset;
+    background-color: hsl(0, 9%, 90%);
+}
+
+.menu a:hover {
+    border-style: solid;
+    border-color: hsl(0, 9%, 90%);
+} */
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.menu li a:hover {
+    color: #fac8d7;
+    /* background-color: hsla(0, 1%, 32%, 0.8); */
+} 
+
+.project {
+    /* display: flex; */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-style: solid;
+}
+
+.project-title {
+    text-align: center;
+}
