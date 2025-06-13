@@ -1,5 +1,6 @@
 :root {
     --soft-pink: #ffd5d5;
+    --soft-pink-2: #fac8d7;
 
     --font-family: 'Press Start 2P', cursive;
 }
@@ -8,6 +9,8 @@ body {
     font-family: var(--font-family);
     margin: 0;
     padding: 20px;
+
+    /* background: ; */
 }
 
 .title {
@@ -17,6 +20,8 @@ body {
 .menu {
     margin-bottom: 5px;
     border-style: solid;
+    position: sticky;
+    top: 0;
 }
 
 .menu ul {
@@ -39,7 +44,7 @@ body {
 }
 
 .menu li a:hover {
-    color: #fac8d7;
+    color: var(--soft-pink-2);
 } 
 
 .about {
@@ -61,11 +66,17 @@ body {
     border-style: solid;
 }
 
-.id-info {
-    margin: 5px;
+.id-picture img:hover {
+    border-color: hsl(0, 3%, 36%);
+
 }
 
-.id-profession-badge {
+.id-info {
+    margin: 5px;
+    font-size: small;
+}
+
+.profession-badge {
     display: inline-block;
     text-align: center;
     margin: 4px 0px;
@@ -74,7 +85,7 @@ body {
     background-color: hsl(0, 9%, 90%);
 }
 
-.id-profession-badge:hover {
+.profession-badge:hover {
     border-style: solid;
     border-color: hsl(0, 9%, 90%);
 }

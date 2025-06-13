@@ -17,6 +17,8 @@ body {
 .menu {
     margin-bottom: 5px;
     border-style: solid;
+    position: sticky;
+    top: 0;
 }
 
 .menu ul {
