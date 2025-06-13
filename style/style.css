@@ -10,7 +10,10 @@ body {
     margin: 0;
     padding: 20px;
 
-    /* background: ; */
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
 }
 
 .title {
@@ -53,7 +56,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border-style: solid;
+    border: 5px solid;
 }
 
 .about-title{
