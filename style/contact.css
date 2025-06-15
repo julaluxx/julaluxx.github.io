@@ -1,5 +1,7 @@
 :root {
-    --soft-pink: #ffd5d5;
+    --gentle-black: rgba(50, 50, 50, 0.8);
+    --pink: #FFC5D3;
+    --mini-pink: #f5c5cd;
 
     --font-family: 'Press Start 2P', cursive;
 }
@@ -54,7 +56,6 @@ body {
 } 
 
 .contact {
-    /* display: flex; */
     display: block;
     justify-content: center;
     align-items: center;
@@ -64,6 +65,37 @@ body {
 
 .contact-title {
     text-align: center;
+}
+
+.contact-list {
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-list ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+.contact-list li {
+    width: 50%;
+    padding: 5px;
+    border: outset;
+    text-align: center;
+    display: inline-block;
+    background-color: #e0e0e0;
+}
+
+.contact-list li:hover {
+    border: inset;
+}
+
+.contact-list a {
+    color: #333333;
+    text-decoration: none;
 }
 
 .footer {

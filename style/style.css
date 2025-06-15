@@ -78,6 +78,7 @@ body {
 .id-info {
     margin: 5px;
     font-size: small;
+    line-height: 1.5;
 }
 
 .profession-badge {

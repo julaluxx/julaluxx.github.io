@@ -87,9 +87,10 @@ body {
 }
 
 .gallery-item:hover {
+    border: 2px solid var(--gentle-black);
+    transition: transform 0.3s ease;
     transform: scale(1.2) translateY(-15px);
     box-shadow: 0px 0px 0px var(--gentle-black);
-    transition: transform 0.3s ease;
 }
 
 .item-cover img {
