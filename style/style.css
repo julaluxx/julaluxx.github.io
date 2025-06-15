@@ -1,10 +1,7 @@
 :root {
     --gentle-black: rgba(50,50,50,0.8);
-    --english-vervel: #4a3267;
-    --blush: #de638a;
-    --pink: #f59ab8;
+    --pink: #FFC5D3;
     --mini-pink: #f5c5cd;
-    --thistle: #c6bade;
 
     --font-family: 'Press Start 2P', cursive;
 }
@@ -59,7 +56,6 @@ body {
 }
 
 .about {
-    /* display: flex; */
     display: block;
     justify-content: center;
     align-items: center;
@@ -72,9 +68,11 @@ body {
 }
 
 .id-picture img {
-    margin: 5px;
-    max-width: 200px;
-    border-style: solid;
+    display: block;
+    max-width: 300px;
+    margin: 10px auto;
+    border-radius: 4px;
+    border: 4px solid;
 }
 
 .id-info {
