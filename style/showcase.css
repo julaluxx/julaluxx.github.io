@@ -66,6 +66,19 @@ body {
     text-align: center;
 }
 
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-item {
+    border: 2px solid;
+}
+
 .footer {
     text-align: center;
 }

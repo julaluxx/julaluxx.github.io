@@ -1,8 +1,16 @@
 :root {
-    --soft-pink: #ffd5d5;
-    --soft-pink-2: #fac8d7;
+    --gentle-black: rgba(50,50,50,0.8);
+    --english-vervel: #4a3267;
+    --blush: #de638a;
+    --pink: #f59ab8;
+    --mini-pink: #f5c5cd;
+    --thistle: #c6bade;
 
     --font-family: 'Press Start 2P', cursive;
+}
+
+*::selection {
+    background-color: var(--pink);
 }
 
 body {
@@ -10,8 +18,8 @@ body {
     margin: 0;
     padding: 20px;
 
-    background-image: 
-        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), 
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 30px 30px;
 }
@@ -28,7 +36,7 @@ body {
 }
 
 .menu ul {
-    background-color: hsla(0, 0%, 20%, 0.800);
+    background-color: var(--gentle-black);
     list-style-type: none;
     padding: 0px;
     margin: 0px;
@@ -47,8 +55,8 @@ body {
 }
 
 .menu li a:hover {
-    color: var(--soft-pink-2);
-} 
+    color: var(--mini-pink);
+}
 
 .about {
     /* display: flex; */
@@ -59,7 +67,7 @@ body {
     border: 5px solid;
 }
 
-.about-title{
+.about-title {
     text-align: center;
 }
 
@@ -69,28 +77,30 @@ body {
     border-style: solid;
 }
 
-.id-picture img:hover {
-    border-color: hsl(0, 3%, 36%);
-
-}
-
 .id-info {
     margin: 5px;
     font-size: small;
 }
 
 .profession-badge {
+    color: white;
     display: inline-block;
     text-align: center;
-    margin: 4px 0px;
-    padding: 2px;
-    border-style: outset;
-    background-color: hsl(0, 9%, 90%);
+    margin: 8px 6px;
+    padding: 8px 14px;
+    background-color: var(--gentle-black);
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    box-shadow: 2px 2px 0px #333;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
 }
 
 .profession-badge:hover {
-    border-style: solid;
-    border-color: hsl(0, 9%, 90%);
+    transform: scale(1.05) rotate(-1deg);
+    color: var(--gentle-black);
+    background-color: var(--mini-pink);
+    box-shadow: 4px 4px 0px #333;
+    cursor: default;
 }
 
 .footer {
