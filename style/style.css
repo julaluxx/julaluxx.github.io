@@ -26,10 +26,11 @@ body {
 }
 
 .menu {
+    top: 0;
+    /* width: 100%; */
+    position: sticky;
     margin-bottom: 5px;
     border-style: solid;
-    position: sticky;
-    top: 0;
 }
 
 .menu ul {
@@ -103,5 +104,6 @@ body {
 }
 
 .footer {
+    font-size: small;
     text-align: center;
 }
