@@ -67,7 +67,11 @@ body {
     text-align: center;
 }
 
-.contact-list {
+button{
+    font-family: var(--font-family);
+}
+
+.contact-buttons {
     gap: 10px;
     padding: 10px;
     display: flex;
@@ -75,13 +79,8 @@ body {
     justify-content: space-evenly;
 }
 
-.contact-list ul{
-    padding: 0;
-    list-style-type: none;
-}
-
-.contact-list li {
-    width: 50%;
+.contact-button {
+    width: 100%;
     padding: 5px;
     border: outset;
     text-align: center;
@@ -89,11 +88,12 @@ body {
     background-color: #e0e0e0;
 }
 
-.contact-list li:hover {
+.contact-button:hover {
     border: inset;
 }
 
-.contact-list a {
+.contact-button a {
+    display: block;
     color: #333333;
     text-decoration: none;
 }
