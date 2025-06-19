@@ -1,5 +1,5 @@
 :root {
-    --gentle-black: rgba(50,50,50,0.8);
+    --gentle-black: rgba(50, 50, 50, 0.8);
     --pink: #FFC5D3;
     --mini-pink: #f5c5cd;
 
@@ -56,12 +56,14 @@ body {
     color: var(--mini-pink);
 }
 
-.about {
+.about,
+.playground {
     display: block;
     justify-content: center;
     align-items: center;
     padding: 10px;
     border: 5px solid;
+    margin-top: 5px;
 }
 
 .about-title {
@@ -101,6 +103,22 @@ body {
     background-color: var(--mini-pink);
     box-shadow: 4px 4px 0px #333;
     cursor: default;
+}
+
+.spotify-container {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 10px; */
+    width: 100%;
+    gap: 10px;
+}
+
+.spotify-player-main{
+    width: 100%;
+}
+.spotify-player-sub {
+    width: 100%;
 }
 
 .footer {
