@@ -109,7 +109,7 @@ body {
 .playground {
     display: flex;
     margin-top: 5px;
-    gap: 10px;
+    gap: 5px;
 }
 
 .music-jam,
@@ -158,6 +158,7 @@ body {
 
 .blog-item:hover {
     transform: scale(1.05) translateY(-5px);
+    box-shadow: 4px 4px 0px var(--gentle-black);
 }
 
 .spotify-container {

@@ -73,6 +73,32 @@ button{
 
 .contact-buttons {
     gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.contact-button {
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    border: outset;
+    text-align: center;
+    display: inline-block;
+    background-color: #e0e0e0;
+}
+
+.contact-button:hover {
+    border: inset;
+}
+
+.contact-button a {
+    color: black;
+    text-decoration: none;
+}
+
+/* .contact-buttons {
+    gap: 10px;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -96,7 +122,7 @@ button{
     display: block;
     color: #333333;
     text-decoration: none;
-}
+} */
 
 .footer {
     font-size: small;

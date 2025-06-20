@@ -78,19 +78,16 @@ body {
 }
 
 .gallery-item {
-    /* border: 2px solid; */
-    /* text-align: center; */
+    border: solid;
+    border-radius: 4px;
     max-width: 300px;
     max-height: fit-content;
     background-color: #ffffff;
-    box-shadow: 4px 4px 0px var(--gentle-black);
 }
 
 .gallery-item:hover {
-    border: 2px solid var(--gentle-black);
-    transition: transform 0.3s ease;
     transform: scale(1.05) translateY(-5px);
-    box-shadow: 0px 0px 0px var(--gentle-black);
+    box-shadow: 4px 4px 0px var(--gentle-black);
 }
 
 .item-cover img {
