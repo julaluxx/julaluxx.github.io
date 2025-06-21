@@ -2,8 +2,13 @@
     --gentle-black: rgba(50, 50, 50, 0.8);
     --pink: #FFC5D3;
     --mini-pink: #f5c5cd;
-
     --font-family: 'Press Start 2P', cursive;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 *::selection {
@@ -14,44 +19,49 @@ body {
     font-family: var(--font-family);
     margin: 0;
     padding: 20px;
-
     background-image:
         linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 30px 30px;
+    min-height: 100vh;
 }
 
 .title {
     font-size: 2em;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .menu {
-    top: 0;
-    /* width: 100%; */
     position: sticky;
-    margin-bottom: 5px;
-    border-style: solid;
+    top: 0;
+    margin-bottom: 10px;
+    border: 2px solid var(--gentle-black);
+    background: var(--gentle-black);
+    z-index: 10;
 }
 
 .menu ul {
-    background-color: var(--gentle-black);
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
+    background: transparent;
+}
+
+.menu li {
+    margin: 0 5px;
 }
 
 .menu a {
     text-decoration: none;
     color: #fff;
-    padding: 15px;
+    padding: 15px 20px;
     display: block;
     text-align: center;
+    transition: color 0.2s;
 }
 
 .menu li a:hover {
@@ -59,30 +69,46 @@ body {
 }
 
 .about {
-    display: block;
-    justify-content: center;
-    align-items: center;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border: 3px solid var(--gentle-black);
+    border-radius: 8px;
     padding: 10px;
-    border: 5px solid;
-    margin-top: 5px;
+}
+
+.personal-info {
+    flex: 1 1 250px;
+    min-width: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
 }
 
 .about-title {
     text-align: center;
+    margin-bottom: 10px;
+}
+
+.id-picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .id-picture img {
-    display: block;
-    max-width: 300px;
-    margin: 10px auto;
-    border-radius: 4px;
-    border: 4px solid;
+    border: 2px solid var(--gentle-black);
+    max-width: 150px;
+    border-radius: 8px;
+    background: #fff;
 }
 
 .id-info {
-    margin: 5px;
-    font-size: small;
-    line-height: 1.5;
+    margin: 5px 0;
+    font-size: 0.95em;
+    line-height: 1.6;
 }
 
 .profession-badge {
@@ -95,7 +121,7 @@ body {
     border-radius: 4px;
     letter-spacing: 0.5px;
     box-shadow: 2px 2px 0px #333;
-    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.2s, color 0.2s;
 }
 
 .profession-badge:hover {
@@ -106,23 +132,59 @@ body {
     cursor: default;
 }
 
+.skill-container {
+    flex: 1 1 250px;
+    min-width: 220px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    gap: 10px;
+}
+
+.skill-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid var(--gentle-black);
+    margin: 5px;
+    border-radius: 4px;
+    background: #fff;
+    min-width: 90px;
+    flex: 1 1 90px;
+}
+
 .playground {
     display: flex;
-    margin-top: 5px;
-    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+    border-radius: 8px;
 }
 
 .music-jam,
 .my-blog {
-    width: 50%;
+    flex: 1 1 300px;
+    min-width: 250px;
     padding: 10px;
-    border: 5px solid;
+    border: 3px solid var(--gentle-black);
+    border-radius: 6px;
 }
 
 .spotify-container {
     display: flex;
     flex-wrap: wrap;
-} 
+    gap: 10px;
+    width: 100%;
+}
 
 .my-blog-container {
     display: flex;
@@ -130,30 +192,37 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 20px;
+    padding: 10px 0;
 }
 
 .blog-item {
     padding: 5px;
     display: flex;
-    border: solid;
-    width: 300px;
-    height: 300px;
-    border-radius: 4px;
+    flex-direction: column;
+    border: 2px solid var(--gentle-black);
+    width: 280px;
+    height: 320px;
+    border-radius: 6px;
+    background: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
 }
 
 .blog-item img {
     width: 100%;
-    height: auto;
-    margin: 0 auto;
-    max-height: 200px;
-    overflow: hidden;
+    height: 180px;
     object-fit: cover;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 8px;
 }
 
 .blog-item a {
     text-decoration: none;
-    color: #000;
+    color: #222;
+    font-weight: bold;
+    margin-top: auto;
+    padding: 5px 0;
+    text-align: center;
 }
 
 .blog-item:hover {
@@ -161,13 +230,29 @@ body {
     box-shadow: 4px 4px 0px var(--gentle-black);
 }
 
-.spotify-container {
-    display: flex;
-    width: 100%;
-    gap: 10px;
-}
-
 .footer {
     font-size: small;
     text-align: center;
+    margin-top: 30px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .about,
+    .playground {
+        flex-direction: column;
+    }
+    .personal-info,
+    .skill-container,
+    .music-jam,
+    .my-blog {
+        min-width: unset;
+        width: 100%;
+    }
+    .blog-item {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
 }
