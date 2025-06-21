@@ -116,7 +116,7 @@ body {
 
 .id-picture img {
     border: 2px solid var(--gentle-black);
-    max-width: 150px;
+    max-width: 200px;
     border-radius: 8px;
     background: #fff;
 }
@@ -215,11 +215,11 @@ body {
     padding: 5px;
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--gentle-black);
     width: 280px;
     height: 320px;
     border-radius: 6px;
     background: #fff;
+    border: 2px solid var(--gentle-black);
     transition: transform 0.2s, box-shadow 0.2s;
     overflow: hidden;
 }
@@ -253,7 +253,6 @@ body {
     color: #555;
 }
 
-/* Responsive Design */
 @media (max-width: 900px) {
     .about,
     .playground {
@@ -272,17 +271,15 @@ body {
         margin: 0 auto;
     }
     .menu ul {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
     }
     .menu a {
         border-radius: 0;
-        border-bottom: 1px solid #fff2;
-        padding: 12px 0;
-        font-size: 0.95em;
-    }
-    .menu li:last-child a {
         border-bottom: none;
+        padding: 10px 10px;
+        font-size: 0.95em;
     }
 }
