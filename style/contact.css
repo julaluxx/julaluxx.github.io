@@ -65,10 +65,7 @@ body {
 
 .menu li a:hover,
 .menu li a:focus {
-    color: var(--gentle-black);
-    background: var(--mini-pink);
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 2px 8px #ffc5d3;
+    color: var(--pink);
     outline: none;
 }
 

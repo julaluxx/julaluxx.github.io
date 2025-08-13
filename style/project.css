@@ -1,6 +1,6 @@
 :root {
     --gentle-black: rgba(50, 50, 50, 0.8);
-    --soft-pink: #ffd5d5;
+    --pink: #FFC5D3;
     --mini-pink: #f5c5cd;
 
     --font-family: 'Press Start 2P', cursive;
@@ -65,10 +65,7 @@ body {
 
 .menu li a:hover,
 .menu li a:focus {
-    color: var(--gentle-black);
-    background: #ffd5d5;
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 2px 8px #ffd5d5;
+    color: var(--pink);
     outline: none;
 }
 
