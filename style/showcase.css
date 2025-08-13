@@ -6,6 +6,16 @@
     --font-family: 'Press Start 2P', cursive;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: var(--pink);
+}
+
 body {
     font-family: var(--font-family);
     margin: 0;
@@ -85,12 +95,13 @@ body {
 }
 
 .showcase {
-    /* display: flex; */
+    gap: 10px;
     display: block;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border: 5px solid var(--gentle-black);
+    border-radius: 4px;
     padding: 10px;
-    border: 5px solid;
 }
 
 .showcase-title {

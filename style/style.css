@@ -86,7 +86,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
-    border: 3px solid var(--gentle-black);
+    border: 5px solid var(--gentle-black);
     border-radius: 4px;
     padding: 10px;
 }
@@ -142,7 +142,7 @@ body {
     color: var(--gentle-black);
     background-color: var(--mini-pink);
     box-shadow: 4px 4px 0px #333;
-    cursor: default;
+    cursor: crosshair;
 }
 
 .skill-container {
@@ -188,7 +188,7 @@ body {
     flex: 1 1 300px;
     min-width: 250px;
     padding: 10px;
-    border: 3px solid var(--gentle-black);
+    border: 5px solid var(--gentle-black);
     border-radius: 4px;
 }
 
