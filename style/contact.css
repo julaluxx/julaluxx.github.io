@@ -11,8 +11,8 @@ body {
     margin: 0;
     padding: 20px;
 
-    background-image: 
-        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), 
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 30px 30px;
 }
@@ -29,7 +29,7 @@ body {
     background: var(--gentle-black);
     z-index: 10;
     border-radius: 4px;
-    box-shadow: 0 4px 16px rgba(50,50,50,0.08);
+    box-shadow: 0 4px 16px rgba(50, 50, 50, 0.08);
     padding: 0 8px;
 }
 
@@ -56,7 +56,7 @@ body {
     border-radius: 8px;
     font-size: 1em;
     letter-spacing: 1px;
-    transition: 
+    transition:
         color 0.2s,
         background 0.2s,
         transform 0.15s,
@@ -76,6 +76,7 @@ body {
         justify-content: center;
         gap: 4px;
     }
+
     .menu a {
         border-radius: 0;
         border-bottom: none;
@@ -96,62 +97,34 @@ body {
     text-align: center;
 }
 
-button{
+button {
     font-family: var(--font-family);
 }
 
 .contact-buttons {
-    gap: 10px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.contact-button {
-    text-decoration: none;
-    width: 100%;
-    padding: 10px;
-    border: outset;
-    text-align: center;
-    display: inline-block;
-    background-color: #e0e0e0;
-}
-
-.contact-button:hover {
-    border: inset;
-}
-
-.contact-button a {
-    color: black;
-    text-decoration: none;
-}
-
-/* .contact-buttons {
     gap: 10px;
-    padding: 10px;
-    display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .contact-button {
+    display: block;
     width: 100%;
-    padding: 5px;
-    border: outset;
+    height: 30px;
+    background-color: var(--gentle-black);
+    color: #fff;
+    text-decoration: none;
     text-align: center;
-    display: inline-block;
-    background-color: #e0e0e0;
+    line-height: 30px;
 }
 
 .contact-button:hover {
-    border: inset;
+    color: var(--gentle-black);
+    background-color: var(--mini-pink);
+    transform: rotate(2deg);
+    box-shadow: 2px 2px 0px var(--gentle-black);
 }
-
-.contact-button a {
-    display: block;
-    color: #333333;
-    text-decoration: none;
-} */
 
 .footer {
     font-size: small;
