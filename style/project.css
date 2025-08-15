@@ -93,6 +93,33 @@ body {
     text-align: center;
 }
 
+.project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.project-item {
+    border: solid;
+    border-radius: 4px;
+    max-width: 300px;
+    max-height: fit-content;
+    background-color: #ffffff;
+}
+
+.project-item:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 4px 4px 0px var(--gentle-black);
+}
+
+.project-desc {
+    margin: 5px;
+    font-size: small;
+}
+
 .footer {
     font-size: small;
     text-align: center;
