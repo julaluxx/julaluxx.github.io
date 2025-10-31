@@ -1,0 +1,39 @@
+.container {
+    margin: 0;
+    padding: 5%;
+}
+
+.card {
+    margin: 0;
+    padding: 2%;
+    box-shadow: 0px 2px 2px #33333312;
+}
+
+.profile-pic {
+    border: solid black;
+    width: 20vh;
+}
+
+.profile-pic > img{
+    width: 100%;
+}
+
+.badge {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin: 8px 6px;
+    padding: 8px 14px;
+    background-color: #333;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    box-shadow: 2px 2px 0px #333;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.2s, color 0.2s;
+}
+
+.badge:hover {
+    transform: scale(1.05) rotate(-1deg);
+    color: #333;
+    background-color: #FFC5D3;
+    box-shadow: 4px 4px 0px #333;
+}
