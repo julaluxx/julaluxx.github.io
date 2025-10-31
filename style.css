@@ -1,5 +1,282 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+:root {
+    --gentle-black: rgba(50, 50, 50, 0.8);
+    --pink: #FFC5D3;
+    --mini-pink: #f5c5cd;
+    --font-family: 'Press Start 2P', cursive;
+}
 
-* {
-  font-family: 'Press Start 2P', sans serif;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: var(--pink);
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu {
+    position: sticky;
+    top: 0;
+    margin-bottom: 16px;
+    border: 2px solid var(--gentle-black);
+    background: var(--gentle-black);
+    z-index: 10;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(50,50,50,0.08);
+    padding: 0 8px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    gap: 8px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 28px;
+    display: block;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    transition: 
+        color 0.2s,
+        background 0.2s,
+        transform 0.15s,
+        box-shadow 0.2s;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    color: var(--pink);
+    outline: none;
+}
+
+.about {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border: 5px solid var(--gentle-black);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.personal-info {
+    flex: 1 1 250px;
+    min-width: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+}
+
+.about-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.id-picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.id-picture img {
+    border: 2px solid var(--gentle-black);
+    max-width: 200px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.id-info {
+    margin: 5px 0;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.profession-badge {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin: 8px 6px;
+    padding: 8px 14px;
+    background-color: var(--gentle-black);
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    box-shadow: 2px 2px 0px #333;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.2s, color 0.2s;
+}
+
+.profession-badge:hover {
+    transform: scale(1.05) rotate(-1deg);
+    color: var(--gentle-black);
+    background-color: var(--mini-pink);
+    box-shadow: 4px 4px 0px #333;
+    cursor: crosshair;
+}
+
+.skill-container {
+    flex: 1 1 250px;
+    min-width: 220px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    gap: 10px;
+}
+
+.skill-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid var(--gentle-black);
+    margin: 5px;
+    border-radius: 4px;
+    background: #fff;
+    min-width: 90px;
+    flex: 1 1 90px;
+}
+
+.playground {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+.music-jam,
+.my-blog {
+    flex: 1 1 300px;
+    min-width: 250px;
+    padding: 10px;
+    border: 5px solid var(--gentle-black);
+    border-radius: 4px;
+}
+
+.spotify-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.my-blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+.blog-item {
+    width: 200px;
+    background: #fff;
+    border: 4px solid #333;      
+    transition: transform 0.15s ease;
+}
+
+.blog-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid #333;
+    display: block;
+}
+
+.blog-item p {
+    margin: 0;
+    padding: 10px;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    color: #222222;
+    transition: color 0.2s ease-in;
+}
+
+.blog-item a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.blog-item:hover{
+    transform: translateY(-4px);
+    box-shadow: 6px 10px 0px #868686; 
+}
+
+.footer {
+    font-size: small;
+    text-align: center;
+    margin-top: 30px;
+    color: #555;
+}
+
+@media (max-width: 900px) {
+    .about,
+    .playground {
+        flex-direction: column;
+    }
+    .personal-info,
+    .skill-container,
+    .music-jam,
+    .my-blog {
+        min-width: unset;
+        width: 100%;
+    }
+    .blog-item {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .menu ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+    .menu a {
+        border-radius: 0;
+        border-bottom: none;
+        padding: 10px 10px;
+        font-size: 0.95em;
+    }
 }
