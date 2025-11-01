@@ -10,7 +10,12 @@
 }
 
 .card-body {
+    padding: 5px;
     line-height: 25px;
+}
+
+img {
+    width: 100%;
 }
 
 .profile-pic {
@@ -40,4 +45,68 @@
     color: #333;
     background-color: #FFC5D3;
     box-shadow: 4px 4px 0px #333;
+}
+
+/* grid auto */
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+.grid > div {
+  transition: 
+    transform 0.25s cubic-bezier(0.25, 1.25, 0.5, 1.1),
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.grid-bounce > div:hover {
+  background-color: #fff;
+  color: #111111;
+  border-color: #111111;
+  box-shadow: 3px 3px 0 #111;
+  transform: scale(1.15) rotate(-3deg) translateY(-3px);
+}
+
+.grid-bounce > div > a:hover {
+    color: #111111;
+}
+
+/* grid 2 cols */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.grid-2-col > div {
+  border: 3px solid #FFC5D3;
+  background-color: #111;
+  box-shadow: 2px 2px 0 #c2808b;
+}
+
+.grid-2-col > div > a {
+    text-decoration: none;
+    color: #FFC5D3;
+}
+
+/* grid 4 cols */
+.grid-4-col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid-4-col > div {
+  border: 3px solid #FFC5D3;
+  background-color: #111;
+  box-shadow: 2px 2px 0 #c2808b;
+}
+
+.grid-4-col > div > a {
+    text-decoration: none;
+    color: #FFC5D3;
 }
