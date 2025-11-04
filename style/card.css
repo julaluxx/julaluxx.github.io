@@ -1,0 +1,28 @@
+/* style/card.css */
+
+/* .card-body ที่ใช้ในส่วน Skills */
+.card-body {
+  border: 2px solid #000;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fdfdfd;
+}
+
+/* .badge สำหรับ Skills และ Profession */
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 4px;
+  font-size: 0.7em;
+  line-height: 1.2;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  /* ทำให้ป้ายดูเหลี่ยมๆ */
+  border-radius: 0; 
+}
+
+/* แยกสี badge ของ profession ให้เด่นขึ้น */
+.id-profession .badge {
+  background-color: #ffc9f3; /* สีฟ้าอ่อน */
+  border-color: #ee68d1;
+}

@@ -1,0 +1,9 @@
+/* style/footer.css */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 2px dashed #999; /* เส้นประแบบ retro */
+  text-align: center;
+  font-size: 0.8em;
+  color: #555;
+}

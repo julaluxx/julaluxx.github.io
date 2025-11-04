@@ -1,0 +1,66 @@
+/* style/grid.css */
+.grid {
+  display: grid;
+  gap: 20px;
+  /* ค่าเริ่มต้นคือ 1 คอลัมน์ (สำหรับ Music Jam Jam) */
+  grid-template-columns: 1fr; 
+}
+
+/* Grid 4 คอลัมน์สำหรับ Blog */
+.grid-4-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* สไตล์ของ .grid-item (การ์ด Blog) */
+.grid-item {
+  border: 2px solid #000;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 3px 3px 0px #aaa;
+  /* ตั้งค่า transition ให้เร็วๆ ดูไม่ smooth เกินไป */
+  transition: all 0.1s ease-in-out; 
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.grid-item img {
+  width: 100%;
+  border-bottom: 2px solid #000;
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  font-size: 0.8em;
+  margin: 0;
+  line-height: 1.4;
+  color: #000;
+  text-shadow: none; /* ปิดเงา p ในการ์ด */
+}
+
+/* === Y2K Bounce Animation === */
+.grid-bounce .grid-item:hover {
+  /* ขยับขึ้นเล็กน้อย */
+  transform: translateY(-8px);
+  /* เพิ่มเงาตอน hover ให้เด่นขึ้น */
+  box-shadow: 6px 6px 0px #000;
+}
+.grid-bounce .grid-item a:hover {
+    color: #0000FF; /* hover ที่ลิงก์ในการ์ด */
+}
+
+
+/* --- Responsive สำหรับ Grid Blog --- */
+@media (max-width: 900px) {
+  .grid-4-col {
+    grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์สำหรับแท็บเล็ต */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-4-col {
+    grid-template-columns: 1fr; /* 1 คอลัมน์สำหรับมือถือ */
+  }
+}

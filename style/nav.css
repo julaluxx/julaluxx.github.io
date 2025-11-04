@@ -1,46 +1,32 @@
+/* style/nav.css */
 nav {
-  background-color: #33333350;
-  border-bottom: 4px solid #FFC5D3;
-  box-shadow: 0 4px 0 #c2808b;
-  text-align: center;
-  padding: 20px 0;
+  background-color: #333;
+  border: 2px solid #000;
+  padding: 10px;
+  box-shadow: 4px 4px 0px #000;
+  margin-bottom: 20px;
 }
 
 .menu {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: inline-flex;
-  gap: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* ระยะห่างระหว่างปุ่ม */
 }
 
 .menu li a {
+  color: #ee68d1; /* สีเหลืองนีออน */
   text-decoration: none;
-  color: #FFC5D3;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 10px 14px;
-  border: 3px solid #FFC5D3;
-  background-color: #111;
-  transition: 
-    transform 0.25s cubic-bezier(0.25, 1.25, 0.5, 1.1),
-    box-shadow 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
-  box-shadow: 2px 2px 0 #c2808b;
-  display: inline-block;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  /* ปิดเงาข้อความใน nav เพื่อให้อ่านง่ายขึ้น */
+  text-shadow: none; 
 }
 
 .menu li a:hover {
-  background-color: #fff;
-  color: #111;
-  border-color: #111;
-  box-shadow: 3px 3px 0 #111;
-  transform: scale(1.15) rotate(-3deg) translateY(-3px);
-}
-
-.menu li a:active {
-  transform: scale(0.95) rotate(0deg) translateY(1px);
-  box-shadow: none;
+  background-color: #ee68d1;
+  color: #333;
+  /* เอฟเฟกต์ hover แบบง่ายๆ */
 }

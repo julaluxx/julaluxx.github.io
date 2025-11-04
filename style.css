@@ -1,19 +1,55 @@
+/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url(style/nav.css);
-@import url(style/button.css);
+
+/* --- Import Components --- */
 @import url(style/text-align.css);
 @import url(style/container.css);
+@import url(style/nav.css);
+@import url(style/card.css);       /* สำหรับ .card-body และ .badge */
+@import url(style/grid.css);      /* สำหรับ .grid, .grid-4-col, .grid-bounce */
+@import url(style/profile.css);   /* สำหรับ section 'About Me' */
+@import url(style/footer.css);    /* สำหรับ .footer */
+@import url(style/button.css); /* (ไฟล์นี้ผมเตรียมไว้ให้ ถ้าคุณอยากสร้างปุ่ม) */
 
+/* --- Global Styles --- */
 * {
-  font-family: 'Press Start 2P', sans serif;
+  font-family: 'Press Start 2P', sans-serif;
+  box-sizing: border-box; /* ช่วยให้การจัดเลย์เอาต์ง่ายขึ้น */
 }
 
 body {
   margin: 0;
   padding: 20px;
+  /* เอฟเฟกต์กระดาษกราฟแบบ Retro */
   background-image:
     linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 30px 30px;
+  background-color: #f0f0f0; /* สีพื้นหลังเว็บยุคเก่า (แทนที่จะเป็นสีขาวสว่าง) */
+  color: #333;
   min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* เงาข้อความแบบแข็ง */
+  text-shadow: 2px 2px #cccccc;
+}
+
+h1.title {
+    font-size: 2.5em; /* ทำให้ชื่อเว็บเด่นขึ้น */
+}
+
+a {
+  color: #333333; /* สีลิงก์สีน้ำเงินคลาสสิก */
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffffff; /* สีม่วง Magenta ตอน hover */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
