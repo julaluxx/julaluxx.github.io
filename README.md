@@ -1,10 +1,12 @@
-# JulaYourLuck
-Jula's personal website & folio.
+# JulaYourLuck  
+Jula's personal website & folio.  
+
+> [Here](www.julaluxx.github.io)  
 
 # Pages
 - About: Specify information about Jula.
-- Showcase: Show-off art works.
+- Showcase: Show(off)case art works.
 - Project: Some preview and pregress of something.
 - Contact: Links to external pages and contact.
 
-@2025 Julaluxx.
+@2026 Julaluxx.
