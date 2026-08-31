@@ -1,88 +1,214 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html data-theme="cupcake">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <title>Julaluxx</title>
+    </head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Julaluxx</title>
-</head>
+    <body class="flex flex-col items-center min-h-screen px-4 py-8">
+        <h1 class="text-center mb-6">Julaluxx</h1>
 
-<body>
-    <h1 class="title txt-center">Julaluxx</h1>
+        <nav class="mb-10">
+            <ul
+                class="menu menu-horizontal gap-1 p-1 bg-base-200 rounded-box shadow-md"
+            >
+                <li><a href="../index.html">About</a></li>
+                <li>
+                    <a class="menu-active rounded-box" href="showcase.html"
+                        >Showcase</a
+                    >
+                </li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="/index.html">About</a></li>
-            <li><a href="showcase.html">Showcase</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <main class="w-full max-w-4xl space-y-6">
+            <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">=== Showcase</h2>
 
-    <div class="container">
-        <div class="txt-center">
-            <h2>=== Showcase ===</h2>
-        </div>
+                    <h3>==> Art :</h3>
+                    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <img
+                                    src="../assets/art/pixelart001.png"
+                                    alt="Pixel art 001"
+                                    class="aspect-[4/3] w-full object-cover"
+                                />
+                            </figure>
+                            <div class="card-body p-4">
+                                <h4>Pixel art 001</h4>
+                                <p class="text-sm">
+                                    I am hungry, therefore I am.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <img
+                                    src="../assets/art/pixelart002.png"
+                                    alt="Pixel art 002"
+                                    class="aspect-[4/3] w-full object-cover"
+                                />
+                            </figure>
+                            <div class="card-body p-4">
+                                <h4>Pixel art 002</h4>
+                                <p class="text-sm">
+                                    I miss my old junky room where I growing up.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <img
+                                    src="../assets/art/pixelart003.png"
+                                    alt="Pixel art 003"
+                                    class="aspect-[4/3] w-full object-cover"
+                                />
+                            </figure>
+                            <div class="card-body p-4">
+                                <h4>Pixel art 003</h4>
+                                <p class="text-sm">Meet me at the shop.</p>
+                            </div>
+                        </div>
+                    </div>
 
-        <h3>==> Art : </h3>
-
-        <div class="grid grid-4-col">
-            <div class="card-body">
-                <div class=""><img src="/assets/art/pixelart001.png" alt="item cover"></div>
-                <h4 class="">Pixel art 001</h4>
-                <p class="card-desc">I am hungry, therefore I am.</p>
+                    <h3 class="pt-2">==> Design :</h3>
+                    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <img
+                                    src="../assets/design/graphic_design001.png"
+                                    alt="Blender 001"
+                                    class="aspect-[4/3] w-full object-cover"
+                                />
+                            </figure>
+                            <div class="card-body p-4">
+                                <h4>Blender 001</h4>
+                                <p class="text-sm">
+                                    Graphic Designer path is cruel.🥲
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <img
+                                    src="../assets/design/graphic_design002.png"
+                                    alt="Blender 002"
+                                    class="aspect-[4/3] w-full object-cover"
+                                />
+                            </figure>
+                            <div class="card-body p-4">
+                                <h4>Blender 002</h4>
+                                <p class="text-sm">
+                                    Graphic Designer path is cruel.🥲
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <img
+                                    src="../assets/design/graphic_design003.png"
+                                    alt="Blender 003"
+                                    class="aspect-[4/3] w-full object-cover"
+                                />
+                            </figure>
+                            <div class="card-body p-4">
+                                <h4>Blender 003</h4>
+                                <p class="text-sm">
+                                    My GPU is begging for mercy.🥲
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <img
+                                    src="../assets/design/graphic_design004.png"
+                                    alt="Blender 004"
+                                    class="aspect-[4/3] w-full object-cover"
+                                />
+                            </figure>
+                            <div class="card-body p-4">
+                                <h4>Blender 004</h4>
+                                <p class="text-sm">
+                                    Graphic Designer path is cruel.🥲
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <img
+                                    src="../assets/design/graphic_design005.png"
+                                    alt="Blender 005"
+                                    class="aspect-[4/3] w-full object-cover"
+                                />
+                            </figure>
+                            <div class="card-body p-4">
+                                <h4>Blender 005</h4>
+                                <p class="text-sm">
+                                    Graphic Designer path is cruel.🥲
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <img
+                                    src="../assets/design/graphic_design006.png"
+                                    alt="Blender 006"
+                                    class="aspect-[4/3] w-full object-cover"
+                                />
+                            </figure>
+                            <div class="card-body p-4">
+                                <h4>Blender 006</h4>
+                                <p class="text-sm">
+                                    Graphic Designer path is cruel.🥲
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <div class=""><img src="/assets/art/pixelart002.png" alt="item cover"></div>
-                <h4 class="">Pixel art 002</h4>
-                <p class="card-desc">I miss my old junky room where I growing up.</p>
-            </div>
-            <div class="card-body">
-                <div class=""><img src="/assets/art/pixelart003.png" alt="item cover"></div>
-                <h4 class="">Pixel art 003</h4>
-                <p class="card-desc">Meet me at the shop.</p>
-            </div>
-        </div>
+        </main>
 
-        <h3>==> Design : </h3>
+        <footer
+            class="footer footer-center p-4 mt-10 bg-base-200 rounded-box shadow-md"
+        >
+            <aside>
+                <p>© 2025 Julaluxx. All rights reserved.</p>
+            </aside>
+        </footer>
 
-        <div class="grid grid-4-col">
-            <div class="card-body">
-                <div class=""><img src="/assets/design/graphic_design001.png" alt=""></div>
-                <h4 class="">Blender 001</h4>
-                <p class="card-desc">Graphic Designer path is cruel.🥲</p>
-            </div>
-            <div class="card-body">
-                <div class=""><img src="/assets/design/graphic_design002.png" alt=""></div>
-                <h4 class="">Blender 002</h4>
-                <p class="card-desc">Graphic Designer path is cruel.🥲</p>
-            </div>
-            <div class="card-body">
-                <div class=""><img src="/assets/design/graphic_design003.png" alt=""></div>
-                <h4 class="">Blender 003</h4>
-                <p class="card-desc">My GPU is begging for mercy.🥲</p>
-            </div>
-            <div class="card-body">
-                <div class=""><img src="/assets/design/graphic_design004.png" alt=""></div>
-                <h4 class="">Blender 004</h4>
-                <p class="card-desc">Graphic Designer path is cruel.🥲</p>
-            </div>
-            <div class="card-body">
-                <div class=""><img src="/assets/design/graphic_design005.png" alt=""></div>
-                <h4 class="">Blender 005</h4>
-                <p class="card-desc">Graphic Designer path is cruel.🥲</p>
-            </div>
-            <div class="card-body">
-                <div class=""><img src="/assets/design/graphic_design006.png" alt=""></div>
-                <h4 class="">Blender 006</h4>
-                <p class="card-desc">Graphic Designer path is cruel.🥲</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>© 2025 Julaluxx. All rights reserved.</p>
-    </div>
-</body>
-
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </body>
 </html>

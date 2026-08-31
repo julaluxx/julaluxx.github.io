@@ -1,43 +1,85 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html data-theme="cupcake">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <title>Julaluxx</title>
+    </head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Julaluxx</title>
-</head>
+    <body class="flex flex-col items-center min-h-screen px-4 py-8">
+        <h1 class="text-center mb-6">Julaluxx</h1>
 
-<body>
-    <h1 class="title txt-center">Julaluxx</h1>
+        <nav class="mb-10">
+            <ul
+                class="menu menu-horizontal gap-1 p-1 bg-base-200 rounded-box shadow-md"
+            >
+                <li><a href="../index.html">About</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li>
+                    <a class="menu-active rounded-box" href="project.html"
+                        >Project</a
+                    >
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="/index.html">About</a></li>
-            <li><a href="showcase.html">Showcase</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <div class="txt-center">
-            <h2>=== Project ===</h2>
-        </div>
-        <div class="project-container">
-            <div class="project-item">
-                <img src="" alt="">
-                <p class="project-desc">project 001</p>
+        <main class="w-full max-w-4xl space-y-6">
+            <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">=== Project</h2>
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <div
+                                    class="flex min-h-48 w-full items-center justify-center bg-base-200 text-base-content/40"
+                                >
+                                    <span class="text-sm">soon</span>
+                                </div>
+                            </figure>
+                            <div class="card-body p-4">
+                                <p class="text-sm">project 001</p>
+                            </div>
+                        </div>
+                        <div
+                            class="card bg-base-100 border border-base-200 shadow-md"
+                        >
+                            <figure>
+                                <div
+                                    class="flex min-h-48 w-full items-center justify-center bg-base-200 text-base-content/40"
+                                >
+                                    <span class="text-sm">soon</span>
+                                </div>
+                            </figure>
+                            <div class="card-body p-4">
+                                <p class="text-sm">project 002</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project-item">
-                <img src="" alt="">
-                <p class="project-desc">project 002</p>
-            </div>
-        </div>
-    </div>
+        </main>
 
-    <div class="footer">
-        <p>© 2025 Julaluxx. All rights reserved.</p>
-    </div>
-</body>
+        <footer
+            class="footer footer-center p-4 mt-10 bg-base-200 rounded-box shadow-md"
+        >
+            <aside>
+                <p>© 2025 Julaluxx. All rights reserved.</p>
+            </aside>
+        </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </body>
 </html>
